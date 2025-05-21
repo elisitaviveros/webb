@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .producto {
+            display: none;
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a nuestra tienda</h1>
+    <img src="https://via.placeholder.com/300" alt="Producto" onclick="mostrarProducto()">
+    
+    <div class="producto" id="producto">
+        <h2>Nombre del Producto</h2>
+        <p>Descripción breve del producto.</p>
+        <p><strong>Precio: $99.99</strong></p>
+        <button onclick="ocultarProducto()">Cerrar</button>
+    </div>
+    
+    <script>
+        function mostrarProducto() {
+            document.getElementById('producto').style.display = 'block';
+        }
+        function ocultarProducto() {
+            document.getElementById('producto').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tienda de Maquillaje</title>
+  <style>
+    /* Tu CSS completo (igual que antes, puedes dejarlo sin cambiar) */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5dc;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #bb8fce;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+    .contenedor {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+    }
+    .boton {
+      background-color: #debaec;
+      color: white;
+      padding: 15px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+      transition: background 0.3s, transform 0.2s;
+    }
+    .boton:hover {
+      background-color: #debaec;
+      transform: scale(1.1);
+    }
+    .product-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .product {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 250px;
+      text-align: center;
+      padding: 15px;
+    }
+    .product img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .product h3 {
+      font-size: 20px;
+      color: #bb8fce;
+    }
+    .product p {
+      font-size: 16px;
+      color: #555;
+    }
+    .price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #d8a7a1;
+    }
+    .slide {
+      display: none;
+      width: 100%;
+      height: 100vh;
+      text-align: center;
+      font-size: 2em;
+      justify-content: center;
+      align-items: flex-start;
+      background-color: lightblue;
+      padding-top: 40px;
+    }
+    .active {
+      display: flex;
+    }
+    .btn {
+      background-color: #ff3366;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<head>
+    <body bgcolor="#bb8fce">
+        <header>
+        <div class="contenedor">
+        <a href="iniciio.html" class="boton">Inicio</a>    
+        <a href="historia.html" class="boton">Conocenos</a>
+        <a href="articulos.html" class="boton">Articulos destacados</a>
+        <a href="maquillaje.html" class="boton">Maquillaje</a>
+        <a href="fragancias.html" class="boton">Fragancias</a>
+        <a href="secion.html" class="boton">Unete</a>
+          <a href="carritoo.html" class="boton">Carrito</a>
+</header>
+</div>
+</body>
+        <div class="product-container">
+        <div class="product">
+            <img src="img/jabon.webp" alt="Producto 2">
+            <h3>Jabon asepxia</h3>
+            <p>El jabón Asepxia combate el exceso de grasa y ayuda a prevenir brotes de acné, dejando tu piel limpia, fresca y libre de impurezas.</p>
+            <p class="price">$120.00</p>
+            <button>🛒</button>
+        </div>
+        <div class="product">
+            <img src="./index_files/Sabonetelimpieza.jpeg" alt="Producto 3">
+            <h3>Limpiador facial</h3>
+            <p>Nuestro limpiador facial elimina impurezas, maquillaje y exceso de grasa, dejando la piel fresca, suave y libre de residuos.</p>
+            <p class="price">$560.00</p>
+            <button>🛒</button>
+        </div>
+        <div class="product">
+            <img src="img/Parches ojos.jpg" alt="Producto 5">
+            <h3>Parches hidratantes ojos</h3>
+            <p>Los parches hidratantes para ojos son perfectos para reducir la apariencia de ojeras, hinchazón y líneas finas. Su fórmula refrescante hidrata profundamente, dejándote una sensación de suavidad y rejuvenecimiento al instante. </p>
+            <p class="price">$250.00</p>
+            <button>🛒</button>
+        </div>
+           <div class="product">
+            <img src="./index_files/Colageno.jpeg" alt="Producto 7">
+            <h3>Parches hidratantes labios</h3>
+            <p>Los parches hidratantes para labios proporcionan una hidratación profunda, combaten la sequedad y mejoran la textura de los labios.</p>
+            <p class="price">$280.00</p>
+            <button>🛒</button>
+        </div>
+            <div class="product-container">
+        <div class="product">
+            <img src="img/ponds.jpg" alt="Producto 2">
+            <h3>Crema ponds</h3>
+            <p>La crema POND'S está diseñada para nutrir y cuidar tu piel, dejándola suave, hidratada y radiante. Con su fórmula rica en ingredientes hidratantes, combate la sequedad y mejora la textura de la piel.</p>
+            <p class="price">$120.00</p>
+            <button>🛒</button>
+        </div>
+        <div class="product">
+            <img src="./index_files/gelcejas.jpeg" alt="Producto 3">
+            <h3>Gel para cejas</h3>
+            <p> El gel para cejas proporciona una fijación duradera y natural, manteniendo tus cejas en su lugar todo el día sin dejar residuos.</p>
+            <p class="price">$250.00</p>
+            <button>🛒</button>
+        </div>
+        <div class="product">
+            <img src="./index_files/masageador facial.jpeg" alt="Producto 5">
+            <h3>Masageador facial</h3>
+            <p> El masajeador facial estimula la circulación, reduce la hinchazón y mejora la absorción de tus productos de cuidado facial.</p>
+            <p class="price">$400.00</p>
+            <button>🛒</button>
+        </div>
+              <div class="product">
+            <img src="./index_files/aguaderosas.jpeg" alt="Producto 2">
+            <h3>Agua de rosas</h3>
+            <p> El agua de rosas es un tónico natural que hidrata, calma y rejuvenece la piel. Con sus propiedades antiinflamatorias y antioxidantes.</p>
+            <p class="price">$120.00</p>
+            <button>🛒</button>
+        </div>
+        <div class="product">
+            <img src="img/miselar.jpg" alt="Producto 3">
+            <h3>Agua miselar</h3>
+            <p> El agua micelar es perfecta para remover maquillaje, impurezas y exceso de grasa sin necesidad de enjuagar. Con su fórmula delicada, hidrata y calma la piel, dejándola fresca y libre de residuos.</p>
+            <p class="price">$250.00</p>
+            <button>🛒</button>
+        </div>
+        <div class="product">
+            <img src="./index_files/Serum.jpg" alt="Producto 5">
+            <h3>Serum facial</h3>
+            <p> El serum facial es un tratamiento concentrado que penetra profundamente en la piel para brindar hidratación, luminosidad y mejorar su textura.</p>
+            <p class="price">$1500.00</p>
+            <button>🛒</button>
+        </div>
+          <div class="product">
+            <img src="./index_files/Star face.jpg" alt="Producto 7">
+            <h3>Starface</h3>
+            <p>Base líquida de alta cobertura, ideal para todo tipo de piel.</p>
+            <p class="price">$350.00</p>
+            <button>🛒</button>
+        </div>
+    </div>
+    <script>
+    window.onload = function() {
+        localStorage.removeItem('carrito');
+    };
+
+    function 🛒 (nombre, precio) {
+        let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+        carrito.push({ nombre, precio });
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+    }
+</script>
+</head>

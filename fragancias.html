@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tienda de Maquillaje</title>
+  <style>
+    /* Tu CSS completo (igual que antes, puedes dejarlo sin cambiar) */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5dc;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #bb8fce;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+    .contenedor {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+    }
+    .boton {
+      background-color: #debaec;
+      color: white;
+      padding: 15px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+      transition: background 0.3s, transform 0.2s;
+    }
+    .boton:hover {
+      background-color: #debaec;
+      transform: scale(1.1);
+    }
+    .product-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .product {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 250px;
+      text-align: center;
+      padding: 15px;
+    }
+    .product img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .product h3 {
+      font-size: 20px;
+      color: #bb8fce;
+    }
+    .product p {
+      font-size: 16px;
+      color: #555;
+    }
+    .price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #d8a7a1;
+    }
+    .slide {
+      display: none;
+      width: 100%;
+      height: 100vh;
+      text-align: center;
+      font-size: 2em;
+      justify-content: center;
+      align-items: flex-start;
+      background-color: lightblue;
+      padding-top: 40px;
+    }
+    .active {
+      display: flex;
+    }
+    .btn {
+      background-color: #ff3366;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      margin: 10px;
+    }
+  </style>
+</head>
+    
+    <header>
+        <body bgcolor="#bb8fce">
+        <div class="contenedor">
+        <a href="iniciio.html" class="boton">Inicio</a>    
+        <a href="historia.html" class="boton">Conocenos</a>
+        <a href="articulos.html" class="boton">Articulos destacados</a>
+        <a href="maquillaje.html" class="boton">Maquillaje</a>
+        <a href="skinker.html" class="boton">Skinker</a>
+        <a href="secion.html" class="boton">Unete</a>
+        <a href="carritoo.html" class="boton">Carrito</a>
+      </div>
+  </body>
+ 
+    </header>
+        
+    <header>   
+     <div class="product-container">      
+        <div class="product">
+            <img src="img/set1.jpg" alt="Producto 36">
+            <h3>Perfume y crema Victoria s Secret </h3>
+            <p>Descubre la frescura y suavidad de la naturaleza con nuestra agua de rosas: el toque perfecto para tu piel y tu bienestar.</p>
+            <p class="price">$1000.00</p> 
+            <button>🛒</button>
+        </div>
+
+        <div class="product">
+            <img src="img/set2.jpg" alt="Producto 37">
+            <h3>Perfume y crema Victoria s Secret</h3>
+            <p>Haz que tu maquillaje dure todo el día con nuestro fijador: frescura, fijación y un acabado impecable en cada aplicación.</p>
+            <p class="price">$1000.00</p>
+            <button>🛒</button>
+        </div>
+
+        <div class="product">
+            <img src="img/set3.jpg" alt="Producto 38">
+            <h3>Perfume y crema Victoria s Secret</h3>
+            <p>Define, fija y resalta tus cejas con el gel perfecto. Naturalidad y estilo todo el dia, con el toque que tus cejas merecen.</p>
+            <p class="price">$1000.00</p>
+            <button>🛒</button>
+        </div>
+          <div class="product">
+            <img src="img/set4.jpg" alt="Producto 39">
+            <h3>Perfume y crema Victoria s Secret</h3>
+            <p>Base líquida de alta cobertura, ideal para todo tipo de piel.</p>
+            <p class="price">$1000.00</p>
+            <button>🛒</button>
+        </div>
+
+      <div class="product">
+            <img src="img/1.jpg" alt="Producto 40">
+            <h3>Perfume Victoria s Secret</h3>
+            <p>Brillo irresistible y un toque de lujo en cada 
+            aplicacion. Descubre el gloss Dior, donde la elegancia se encuentra con la perfeccion.</p>
+            <p class="price">$500.00</p>
+            <button>🛒</button>
+        </div>
+
+       <div class="product">
+            <img src="img/2.jpg" alt="Producto 41">
+            <h3>Perfume Victoria s Secret</h3>
+            <p>Serum para rejuvenecer y darle luminosidad a tu piel.</p>
+            <p class="price">$500.00</p>
+            <button>🛒</button>
+        </div>
+          <div class="product">
+            <img src="img/3.jpg" alt="Producto 42">
+            <h3>Perfume Victoria s Secret</h3>
+            <p>Base líquida de alta cobertura, ideal para todo tipo de piel.</p>
+            <p class="price">$500.00</p>
+            <button>🛒</button>
+        </div>
+
+        <div class="product">
+            <img src="img/4.jpg" alt="Producto 43">
+            <h3>Perfume Victoria s Secret</h3>
+            <p>Crema hidratante para piel seca, con vitamina E.</p>
+            <p class="price">$500.00</p>
+            <button>🛒</button>
+        </div>
+
+      <div class="product">
+            <img src="img/5.jpg" alt="Producto 44">
+            <h3>Perfume Victoria s Secret</h3>
+            <p>Serum para rejuvenecer y cobertura ideal para todo tipo de piel.</p>
+            <p class="price">$500.00</p>
+            <button>🛒</button>
+        </div>
+          <div class="product">
+            <img src="img/6.jpg" alt="Producto 45">
+            <h3>Perfume Victoria s Secret</h3>
+            <p>Frescura infinita con notas de margarita y aloe refrescante. 🌿🌊 Sumérgete en un aroma limpio, ligero y seductor.</p>
+            <p class="price">$500.00</p>
+            <button>🛒</button>
+        </div>
+
+        <div class="product">
+            <img src="img/7.jpg" alt="Producto 46">
+            <h3>Perfume Victoria s Secret</h3>
+            <p> ofrece una gama de aromas sensuales y sofisticados, perfectos para cualquier ocasión. Con notas frescas, florales o dulces, cada perfume envuelve tus sentidos y deja una huella irresistible. ¡Haz de tu fragancia un sello personal y destaca con elegancia y estilo! </p>
+            <p class="price">$500.00</p>
+            <button>🛒</button>
+        </div>
+
+        <div class="product">
+            <img src="img/8.jpg" alt="Producto 47">
+            <h3> ofrece una gama de aromas sensuales y sofisticados, perfectos para cualquier ocasión. Con notas frescas, florales o dulces, cada perfume envuelve tus sentidos y deja una huella irresistible. ¡Haz de tu fragancia un sello personal y destaca con elegancia y estilo! </p>
+            <p class="price">$500.00</p>
+            <button>🛒</button>
+        </div>
+          <div class="product">
+            <img src="img/9.jpg" alt="Producto 48">
+            <h3> ofrece una gama de aromas sensuales y sofisticados, perfectos para cualquier ocasión. Con notas frescas, florales o dulces, cada perfume envuelve tus sentidos y deja una huella irresistible. ¡Haz de tu fragancia un sello personal y destaca con elegancia y estilo! </p>
+            <p class="price">$500.00</p>
+            <button>🛒</button>
+        </div>
+
+        <div class="product">
+            <img src="img/10.jpg" alt="Producto 49">
+            <h3>Perfume Victoria s Secret</h3>
+            <p>ofrece una gama de aromas sensuales y sofisticados, perfectos para cualquier ocasión. Con notas frescas, florales o dulces, cada perfume envuelve tus sentidos y deja una huella irresistible. ¡Haz de tu fragancia un sello personal y destaca con elegancia y estilo! </p>
+            <p class="price">$500.00</p>
+            <button>🛒</button>
+        </div>
+
+        <div class="product">
+            <img src="img/11.jpg" alt="Producto 50">
+            <h3>Perfume Victoria s Secret</h3>
+            <p>Envuélvete en una bruma de dulzura y seducción con notas cremosas de almendra y flores delicadas.Siente la suavidad aterciopelada en cada gota.</p>
+            <p class="price">$500.00</p>
+            <button>🛒</button>
+        </div>
+          <div class="product">
+            <img src="img/12.jpg" alt="Producto 51">
+            <h3>Perfume Victoria s Secret</h3>
+            <p>Envuélvete en una bruma de dulzura y seducción con notas cremosas de almendra y flores delicadas.Siente la suavidad aterciopelada en cada gota.</p>
+            <p class="price">$500.00</p>
+            <button>🛒</button>
+        </div>
+
+        <div class="product">
+            <img src="img/13.jpg" alt="Producto 52">
+            <h3>Perfume Victoria s Secret</h3>
+            <p>ofrece una gama de aromas sensuales y sofisticados, perfectos para cualquier ocasión. Con notas frescas, florales o dulces, cada perfume envuelve tus sentidos y deja una huella irresistible. ¡Haz de tu fragancia un sello personal y destaca con elegancia y estilo! </p>
+            <p class="price">$500.00</p>
+            <button>🛒</button>
+        </div>
+
+        <div class="product">
+            <img src="img/14.jpg" alt="Producto 53">
+            <h3>Perfume Victoria s Secret</h3>
+            <p>ofrece una gama de aromas sensuales y sofisticados, perfectos para cualquier ocasión. Con notas frescas, florales o dulces, cada perfume envuelve tus sentidos y deja una huella irresistible. ¡Haz de tu fragancia un sello personal y destaca con elegancia y estilo! </p>
+            <p class="price">$30.00</p>
+            <button>🛒</button>
+        </div>
+          <div class="product">
+            <img src="img/15.jpg" alt="Producto 54">
+            <h3>ofrece una gama de aromas sensuales y sofisticados, perfectos para cualquier ocasión. Con notas frescas, florales o dulces, cada perfume envuelve tus sentidos y deja una huella irresistible. ¡Haz de tu fragancia un sello personal y destaca con elegancia y estilo! .</p>
+            <p class="price">$25.00</p>
+            <button>🛒</button>
+        </div>
+
+        <div class="product">
+            <img src="img/16.jpg" alt="Producto 55">
+            <h3>Perfume Victoria s Secret</h3>
+            <p>ofrece una gama de aromas sensuales y sofisticados, perfectos para cualquier ocasión. Con notas frescas, florales o dulces, cada perfume envuelve tus sentidos y deja una huella irresistible. ¡Haz de tu fragancia un sello personal y destaca con elegancia y estilo! s</p>
+            <p class="price">$15.00</p>
+            <button>🛒</button>
+        </div>
+
+        
+
+    </div>
+    <script>
+    window.onload = function() {
+        localStorage.removeItem('carrito');
+    };
+
+    function 🛒 (nombre, precio) {
+        let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+        carrito.push({ nombre, precio });
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+    }
+</script>
+
+</header>

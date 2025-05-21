@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tienda de Maquillaje</title>
+  <style>
+    /* Tu CSS completo (igual que antes, puedes dejarlo sin cambiar) */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5dc;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #bb8fce;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+    .contenedor {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+    }
+    .boton {
+      background-color: #debaec;
+      color: white;
+      padding: 15px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+      transition: background 0.3s, transform 0.2s;
+    }
+    .boton:hover {
+      background-color: #debaec;
+      transform: scale(1.1);
+    }
+    .product-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .product {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 250px;
+      text-align: center;
+      padding: 15px;
+    }
+    .product img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .product h3 {
+      font-size: 20px;
+      color: #bb8fce;
+    }
+    .product p {
+      font-size: 16px;
+      color: #555;
+    }
+    .price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #d8a7a1;
+    }
+    .slide {
+      display: none;
+      width: 100%;
+      height: 100vh;
+      text-align: center;
+      font-size: 2em;
+      justify-content: center;
+      align-items: flex-start;
+      background-color: lightblue;
+      padding-top: 40px;
+    }
+    .active {
+      display: flex;
+    }
+    .btn {
+      background-color: #ff3366;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <body bgcolor="#bb8fce">
+    <div class="product-container">
+      <a href="iniciio.html" class="boton">Inicio</a>
+      <a href="articulos.html" class="boton">Articulos</a>
+      <a href="historia.html" class="boton">Conócenos</a>
+      <a href="maquillaje.html" class="boton">Maquillaje</a>
+      <a href="skinker.html" class="boton">Skincare</a>
+      <a href="secion.html" class="boton">Únete</a>
+    </div>
+  </header>
+
+<body>
+<center>
+  <p><h1>Carrito de Compras</h1></p>
+</center>
+  <ul id="lista-carrito"></ul>
+
+  <script>
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    const lista = document.getElementById('lista-carrito');
+
+    if (carrito.length === 0) {
+      lista.innerHTML = "<li>El carrito está vacío.</li>";
+    } else {
+      carrito.forEach(producto => {
+        const li = document.createElement('li');
+        li.textContent = ${producto.nombre} - $${producto.precio};
+        lista.appendChild(li);
+      });
+    }
+  </script>

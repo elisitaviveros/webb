@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tienda de Maquillaje</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5dc;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #bb8fce;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+    .contenedor {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+    }
+    .boton {
+      background-color: #debaec;
+      color: white;
+      padding: 15px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+      transition: background 0.3s, transform 0.2s;
+    }
+    .boton:hover {
+      background-color: #debaec;
+      transform: scale(1.1);
+    }
+    .product-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .product {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 250px;
+      text-align: center;
+      padding: 15px;
+    }
+    .product img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .product h3 {
+      font-size: 20px;
+      color: #bb8fce;
+    }
+    .product p {
+      font-size: 16px;
+      color: #555;
+    }
+    .price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #d8a7a1;
+    }
+    .slide {
+      display: none;
+      width: 100%;
+      height: 100vh;
+      text-align: center;
+      font-size: 2em;
+      justify-content: center;
+      align-items: flex-start;
+      background-color: lightblue;
+      padding-top: 40px;
+    }
+    .active {
+      display: flex;
+    }
+    .btn {
+      background-color: #ff3366;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <body bgcolor="#bb8fce">
+    <div class="product-container">
+      <a href="iniciio.html" class="boton">Inicio</a>
+      <a href="historia.html" class="boton">Conócenos</a>
+      <a href="maquillaje.html" class="boton">Maquillaje</a>
+      <a href="skinker.html" class="boton">Skincare</a>
+      <a href="secion.html" class="boton">Únete</a>
+      <a href="carritoo.html" class="boton">🛒 Carrito</a>
+    </div>
+  </header>
+
+  <div class="product-container">
+    <div class="product">
+      <img src="./index_files/Delineador Dior.jpg" alt="Producto 1">
+      <h3>Delineador Dior</h3>
+      <p>Delineador super práctico y contra el agua.</p>
+      <p class="price">$250.00</p>
+      <button onclick="agregarAlCarrito('Delineador Dior', 250)">🛒</button>
+    </div>
+
+    <div class="product">
+      <img src="./index_files/Paleta de sombras Dior.jpg" alt="Producto 2">
+      <h3>Paleta de sombras Dior</h3>
+      <p>Naturalidad y estilo todo el día.</p>
+      <p class="price">$250.00</p>
+      <button onclick="agregarAlCarrito('Paleta de sombras Dior', 250)">🛒</button>
+    </div>
+
+    <div class="product">
+      <img src="./index_files/glosdior.jpeg" alt="Producto 3">
+      <h3>Gloss Dior</h3>
+      <p>Brillo irresistible y lujo en cada aplicación.</p>
+      <p class="price">$1500.00</p>
+      <button onclick="agregarAlCarrito('Gloss Dior', 1500)">🛒</button>
+    </div>
+
+    <div class="product">
+      <img src="./index_files/Crema Pond&#39;s.jpg" alt="Producto 4">
+      <h3>Base de Maquillaje</h3>
+      <p>Cobertura alta para todo tipo de piel.</p>
+      <p class="price">$350.00</p>
+      <button onclick="agregarAlCarrito('Base de Maquillaje', 350)">🛒</button>
+    </div>
+
+    <div class="product">
+      <img src="./index_files/fijador.jpeg" alt="Producto 5">
+      <h3>Rimel para pestañas</h3>
+      <p>Duración y frescura todo el día.</p>
+      <p class="price">$65.00</p>
+      <button onclick="agregarAlCarrito('Rimel para pestañas', 65)">🛒</button>
+    </div>
+
+    <div class="product">
+      <img src="./index_files/gelcejas.jpeg" alt="Producto 6">
+      <h3>Gel para cejas</h3>
+      <p>Define y fija tus cejas con estilo.</p>
+      <p class="price">$250.00</p>
+      <button onclick="agregarAlCarrito('Gel para cejas', 250)">🛒</button>
+    </div>
+
+    <div class="product">
+      <img src="./index_files/Rubor bissu.jpg" alt="Producto 7">
+      <h3>Rubor Bissu</h3>
+      <p>Color radiante y natural.</p>
+      <p class="price">$65.00</p>
+      <button onclick="agregarAlCarrito('Rubor Bissu', 65)">🛒</button>
+    </div>
+  </div>
+
+  <!-- Slide que muestra el carrito -->
+  <div class="slide active" id="carrito-slide">
+    <div id="contenido-carrito"></div>
+  </div>
+
+  <script>
+    window.onload = function () {
+      mostrarCarrito();
+    };
+
+    function agregarAlCarrito(nombre, precio) {
+      let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+      carrito.push({ nombre, precio });
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+      mostrarCarrito();
+      alert(`${nombre} ha sido agregado al carrito.`);
+    }
+
+    function mostrarCarrito() {
+      const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+      const contenedor = document.getElementById('contenido-carrito');
+      contenedor.innerHTML = ''; // Limpiar antes de volver a mostrar
+
+      if (carrito.length === 0) {
+        contenedor.innerHTML = '<p>Tu carrito está vacío.</p>';
+      } else {
+        let total = 0;
+        carrito.forEach((producto) => {
+          const item = document.createElement('p');
+          item.textContent = `${producto.nombre} - $${producto.precio}`;
+          contenedor.appendChild(item);
+          total += producto.precio;
+        });
+
+        const totalElement = document.createElement('p');
+        totalElement.innerHTML = `<strong>Total: $${total}</strong>`;
+        contenedor.appendChild(totalElement);
+      }
+
+      document.getElementById('carrito-slide').classList.add('active');
+    }
+  </script>
+</body>
+</html>
